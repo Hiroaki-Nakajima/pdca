@@ -1,0 +1,65 @@
+header {
+  height: 5vh;
+  background-color: lightslategray;
+}
+
+.container {
+  height:95vh;
+}
+
+
+.upper-container {
+  width: 100vw;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  background-color: blue;
+}
+
+.achievement-box {
+  width: 63%;
+  height: 95%;
+  align-self: center;
+  background-color: lightblue;
+}
+
+.cut-box {
+  width: 35%;
+  height: 95%;
+  align-self: center;
+  background-color: lightblue;
+}
+
+.lower-container {
+  height: 70%;
+  background-color: green;
+}
+
+.month-lists {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.month-list {
+  display: inline-block;
+  width: 230px;
+  height: 510px;
+  margin: 5px 0 0 5px; 
+  background-color: lightgreen;
+}
+
+.month-list-last {
+  display: inline-block;
+  width: 230px;
+  height: 510px;
+  margin: 5px 5px 0 5px; 
+  background-color: lightgreen;
+}
+
+.list {
+  
+}
+
+.card {
+
+}
