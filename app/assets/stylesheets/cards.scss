@@ -38,6 +38,7 @@ header {
 .month-lists {
   overflow-x: auto;
   white-space: nowrap;
+  display: inline-flex;
 }
 
 .month-list {
@@ -56,10 +57,10 @@ header {
   background-color: lightgreen;
 }
 
-.list {
-  
-}
-
 .card {
-
+  width: 220px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 5px;
+  background-color: lightyellow;
 }

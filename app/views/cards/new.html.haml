@@ -1,0 +1,4 @@
+= form_with model: @card, local: true do |f|
+  = f.text_field :title, placeholder: :タイトル
+  = f.text_area :content
+  = f.submit 'SEND'
