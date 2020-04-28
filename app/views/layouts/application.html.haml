@@ -9,4 +9,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
+      = link_to "TOP", root_path
+      = link_to "NEW", new_card_path 
     = yield

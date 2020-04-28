@@ -5,28 +5,20 @@
   .lower-container
     %ul.month-lists
       %li.month-list
-        .list
+        - @cards.each do |card|
           .card
-          .card
+            .card__title
+              = card.title
+            .card__content
+              = card.content
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list
-        .list
       %li.month-list-last
-        .list
