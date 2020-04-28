@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
   def index
     @cards = Card.all
+    @months = Month.all
   end
 
   def new

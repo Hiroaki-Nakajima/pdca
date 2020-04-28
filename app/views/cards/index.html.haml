@@ -4,21 +4,12 @@
     .cut-box
   .lower-container
     %ul.month-lists
-      %li.month-list
-        - @cards.each do |card|
-          .card
-            .card__title
-              = card.title
-            .card__content
-              = card.content
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list
-      %li.month-list-last
+      - @months.each do |month|
+        %li.month-list
+          = month.name
+          - @cards.each do |card|
+            .card
+              .card__title
+                = card.title
+              .card__content
+                = card.content
