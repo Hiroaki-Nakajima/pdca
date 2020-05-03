@@ -7,7 +7,7 @@
       - @months.each do |month|
         %li.month-list
           = month.name
-          - @cards.each do |card|
+          - month.cards.each do |card|
             .card
               .card__title
                 = card.title
