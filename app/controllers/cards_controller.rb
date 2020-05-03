@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def index
-    @cards = Card.all
+    cards = Card.includes(:month)
     @months = Month.all
   end
 
