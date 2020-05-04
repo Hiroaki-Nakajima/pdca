@@ -16,7 +16,7 @@ header {
   background-color: blue;
 }
 
-.achievement-box {
+.plan-box {
   width: 63%;
   height: 95%;
   align-self: center;
@@ -63,4 +63,7 @@ header {
   margin: 0 auto;
   margin-top: 5px;
   background-color: lightyellow;
+  &__plan {
+    font-size: 5px;
+  }
 }

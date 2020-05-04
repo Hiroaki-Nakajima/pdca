@@ -2,10 +2,12 @@ class CardsController < ApplicationController
   def index
     cards = Card.includes(:month)
     @months = Month.all
+    @plans = Plan.all
   end
 
   def new
     @card = Card.new
+    @plans = Plan.all
   end
 
   def create
@@ -15,6 +17,6 @@ class CardsController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:title, :content)
+    params.require(:card).permit(:title, :content, :month_id, :plan_id)
   end
 end

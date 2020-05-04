@@ -1,6 +1,11 @@
 .container
   .upper-container
-    .achievement-box
+    .plan-box
+      %ul.plans
+        - @plans.each do |plan|
+          %li.plan
+            = plan.content
+
     .cut-box
   .lower-container
     %ul.month-lists
@@ -13,3 +18,5 @@
                 = card.title
               .card__content
                 = card.content
+              .card__plan
+                = card.plan.content
