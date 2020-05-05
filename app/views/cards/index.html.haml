@@ -6,7 +6,10 @@
           %li.plan
             = plan.content
             = plan.cards.length
-
+            = plan.cards.where(status: "done").length
+            - if plan.cards.length != 0
+              = "達成率#{((plan.cards.where(status: "done").length).to_f / (plan.cards.length).to_f * 100).round(1)}%"
+              
     .cut-box
   .lower-container
     %ul.month-lists
