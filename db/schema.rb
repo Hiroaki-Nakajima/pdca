@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_055902) do
+ActiveRecord::Schema.define(version: 2020_05_05_054321) do
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_055902) do
     t.datetime "updated_at", null: false
     t.bigint "month_id"
     t.bigint "plan_id"
+    t.string "status"
     t.index ["month_id"], name: "index_cards_on_month_id"
     t.index ["plan_id"], name: "index_cards_on_plan_id"
   end

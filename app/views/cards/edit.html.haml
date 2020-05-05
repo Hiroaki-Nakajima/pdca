@@ -1,0 +1,6 @@
+= form_with model: @card, local: true do |f|
+  = f.text_field :title, placeholder: :タイトル
+  = f.text_area :content
+  = f.collection_select :plan_id, Plan.group(:content).order(id: :desc), :id, :content, {prompt: ""}
+  = f.collection_select :month_id, Month.group(:name).order(:id), :id, :name, {prompt: ""}
+  = f.submit 'SEND'

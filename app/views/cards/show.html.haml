@@ -1,0 +1,6 @@
+= @card.title
+= @card.content
+= @card.plan.content
+= link_to "done", "/cards/#{@card.id}/done"
+= link_to "編集", edit_card_path
+= link_to "削除", "/cards/#{@card.id}", method: :delete

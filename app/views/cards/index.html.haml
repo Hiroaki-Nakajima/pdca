@@ -4,7 +4,12 @@
       %ul.plans
         - @plans.each do |plan|
           %li.plan
-            = plan.content
+            = link_to "/plans/#{plan.id}" do
+              = plan.content
+            = plan.cards.length
+            = plan.cards.where(status: "done").length
+            - if plan.cards.length != 0
+              = "達成率#{((plan.cards.where(status: "done").length).to_f / (plan.cards.length).to_f * 100).round(1)}%"
 
     .cut-box
   .lower-container
@@ -13,10 +18,14 @@
         %li.month-list
           = month.name
           - month.cards.each do |card|
-            .card
-              .card__title
-                = card.title
-              .card__content
-                = card.content
-              .card__plan
-                = card.plan.content
+            = link_to "/cards/#{card.id}" do
+              .card
+                .card__title
+                  = card.title
+                .card__content
+                  = card.content
+                .card__plan
+                  = card.plan.content
+                  = link_to "done", "/cards/#{card.id}/done"
+                  = link_to "削除", "/cards/#{card.id}", method: :delete
+

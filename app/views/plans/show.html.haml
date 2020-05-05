@@ -1,0 +1,10 @@
+= @plan.content
+- @plan.cards.each do |card|
+  = card.month.name
+  = card.title
+  - if card.status == "done"
+    "完了"
+  - else
+    "未完了"
+= link_to "編集", edit_plan_path
+= link_to "削除", "/plans/#{@plan.id}", method: :delete
