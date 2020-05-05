@@ -19,6 +19,22 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
+  def edit
+    @card = Card.find(params[:id])
+  end
+
+  def update
+    @card = Card.find(params[:id])
+    @card.update(card_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy
+    redirect_to root_path
+  end
+
   def done
     @card = Card.find(params[:id])
     if @card.status.blank?
