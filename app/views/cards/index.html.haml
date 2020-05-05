@@ -4,7 +4,8 @@
       %ul.plans
         - @plans.each do |plan|
           %li.plan
-            = plan.content
+            = link_to "/plans/#{plan.id}" do
+              = plan.content
             = plan.cards.length
             = plan.cards.where(status: "done").length
             - if plan.cards.length != 0
