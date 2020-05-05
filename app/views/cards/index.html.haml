@@ -5,6 +5,7 @@
         - @plans.each do |plan|
           %li.plan
             = plan.content
+            = plan.cards.length
 
     .cut-box
   .lower-container
@@ -13,10 +14,13 @@
         %li.month-list
           = month.name
           - month.cards.each do |card|
-            .card
-              .card__title
-                = card.title
-              .card__content
-                = card.content
-              .card__plan
-                = card.plan.content
+            = link_to "/cards/#{card.id}" do
+              .card
+                .card__title
+                  = card.title
+                .card__content
+                  = card.content
+                .card__plan
+                  = card.plan.content
+                  = link_to "done", "/cards/#{card.id}/done"
+
