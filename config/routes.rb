@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "cards#index"
+  root "application#index"
 
   resources :cards do
     member do
@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   end
 
   resources :months
-  
+  resources :application, onry: :index
 end
