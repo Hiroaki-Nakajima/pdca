@@ -1,0 +1,12 @@
+= @month.name
+%ul.cards
+  - @month.cards.each do |card|
+    %li.card
+      .card__title
+        = card.title
+      .card__content
+        = card.content
+      .card__plan
+        = card.plan.content
+        = link_to "done", "/cards/#{card.id}/done"
+        = link_to "削除", "/cards/#{card.id}", method: :delete
