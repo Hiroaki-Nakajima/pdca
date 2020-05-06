@@ -25,7 +25,8 @@
     %ul.month-lists
       - @months.each do |month|
         %li.month-list
-          = month.name
+          = link_to "/months/#{month.id}" do
+            = month.name
           - month.cards.each do |card|
             = link_to "/cards/#{card.id}" do
               .card
