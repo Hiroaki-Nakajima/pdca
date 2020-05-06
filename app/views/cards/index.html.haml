@@ -15,6 +15,7 @@
       - @routines.each do |routine|
         = routine.content
         = routine.count
+        = link_to "done", "/routines/#{routine.id}/done"
   .lower-container
     %ul.month-lists
       - @months.each do |month|

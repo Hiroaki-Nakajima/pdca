@@ -9,7 +9,9 @@ class RoutinesController < ApplicationController
   end
 
   def done
-    
+    @routine = Routine.find(params[:id])
+    @routine.update(count: (@routine.count += 1))
+    redirect_to root_path
   end
 
   private
