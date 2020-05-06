@@ -3,6 +3,7 @@ class CardsController < ApplicationController
     cards = Card.includes(:month)
     @months = Month.all
     @plans = Plan.all
+    @routines = Routine.all
   end
 
   def new

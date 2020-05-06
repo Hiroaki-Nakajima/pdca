@@ -11,7 +11,10 @@
             - if plan.cards.length != 0
               = "達成率#{((plan.cards.where(status: "done").length).to_f / (plan.cards.length).to_f * 100).round(1)}%"
 
-    .cut-box
+    .routines-box
+      - @routines.each do |routine|
+        = routine.content
+        = routine.count
   .lower-container
     %ul.month-lists
       - @months.each do |month|
