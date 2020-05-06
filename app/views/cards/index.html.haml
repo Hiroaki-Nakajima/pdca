@@ -12,10 +12,15 @@
               = "達成率#{((plan.cards.where(status: "done").length).to_f / (plan.cards.length).to_f * 100).round(1)}%"
 
     .routines-box
-      - @routines.each do |routine|
-        = routine.content
-        = routine.count
-        = link_to "done", "/routines/#{routine.id}/done"
+      %ul.routines
+        - @routines.each do |routine|
+          %li.routine
+            = link_to "/routines/#{routine.id}" do
+              = routine.title
+            = routine.count
+            = link_to "done", "/routines/#{routine.id}/done"
+        
+
   .lower-container
     %ul.month-lists
       - @months.each do |month|

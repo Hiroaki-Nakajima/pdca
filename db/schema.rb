@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_095540) do
+ActiveRecord::Schema.define(version: 2020_05_06_085554) do
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_095540) do
     t.integer "count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title", null: false
   end
 
   add_foreign_key "cards", "months"
